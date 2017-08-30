@@ -1,0 +1,2 @@
+<!-- 定义service -->
+<bean id="userService" class="com.wxisme.ssm.service.impl.UserServiceImpl"/>
