@@ -12,15 +12,28 @@
 	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 	<!-- 扫描指定包带@Controller注解的类 -->
-	<context:component-scan base-package="springmvc" ></context:component-scan>
-	
+	<context:component-scan base-package="springmvc"></context:component-scan>
+
+	<context:annotation-config />
+
 	<!--视图解析器 -->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- WebRoot到一指定文件夹文件路径 -->
 		<property name="prefix" value="/WEB-INF/" />
 		<!-- 视图名称后缀 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
+
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+	<!-- 注解的处理器适配器 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
+	<!-- 注解的处理器映射器 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
 
 	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
