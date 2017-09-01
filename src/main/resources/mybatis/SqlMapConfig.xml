@@ -21,8 +21,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 	<!-- 通过扫描包的方式来进行批量加载映射文件 -->
 	<mappers>
-	<!--  
 		<mapper resource="springmvc/dao/mapper/userMap.xml" />
-	-->
 	</mappers>
 </configuration>

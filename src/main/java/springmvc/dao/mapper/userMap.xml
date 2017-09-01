@@ -12,7 +12,9 @@
 		<result property="user_password" column="user_password" />
 	</resultMap>
 	
+	<!--  
 	<select id="getUserById" parameterType="int" resultMap="userResultMapper">
 		select * from login where user_id = #{id}
 	</select>
+	-->
 </mapper>

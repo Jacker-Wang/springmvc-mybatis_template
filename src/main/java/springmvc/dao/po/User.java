@@ -1,5 +1,7 @@
 package springmvc.dao.po;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * @author gacl
  * user表所对应的实体类
@@ -11,13 +13,9 @@ public class User {
     private String user_name;
     private String user_password;
 
-   
-
 	public int getUser_id() {
 		return user_id;
 	}
-
-
 
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
@@ -46,8 +44,6 @@ public class User {
 	public void setUser_password(String user_password) {
 		this.user_password = user_password;
 	}
-
-
 
 	@Override
     public String toString() {

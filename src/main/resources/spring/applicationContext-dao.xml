@@ -15,16 +15,20 @@ http://www.springframework.org/schema/tx/spring-tx.xsd
 http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+	<!-- 开启注解功能 -->
+	<context:annotation-config />
+
 	<!-- 加载数据库连接的资源文件 -->
-	<context:property-placeholder location="/WEB-INF/classes/jdbc.properties" />
+	<!-- <context:property-placeholder location="/WEB-INF/classes/jdbc.properties" 
+		/> -->
 
 	<!-- 配置数据源 dbcp数据库连接池 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
 		destroy-method="close">
-		<property name="driverClassName" value="${jdbc.driver}" />
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/testcasepro" />
+		<property name="username" value="root" />
+		<property name="password" value="1234" />
 	</bean>
 
 	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -34,17 +38,24 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 		<!-- 数据库连接池 -->
 		<property name="dataSource" ref="dataSource" />
 		<!-- 加载Mybatis全局配置文件 -->
-		<property name="configLocation" value="/WEB-INF/classes/mybatis/SqlMapConfig.xml" />
-		<property name="mapperLocations" value="/WEB-INF/classes/mybatis/userMap.xml"/>  
+		<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
+		<!-- <property name="mapperLocations" value="/WEB-INF/classes/mybatis/userMap.xml"/> -->
 	</bean>
+
+	<!--创建数据映射器，数据映射器必须为接口 -->
+	<!-- 
+	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="springmvc.dao.mapper.UserMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	 -->
+
+	<bean id="userService" class="springmvc.service.ServiceUserMap"></bean>
 
 	<!-- 配置mapper扫描器 -->
 	<!-- 扫描包路径，如果需要扫描多个包中间用半角逗号隔开 -->
-	<!--  
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="springmvc.dao.mapper"></property>
-		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
-	</bean>
-	-->
+	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> <property 
+		name="basePackage" value="springmvc.dao.mapper"></property> <property name="sqlSessionFactory" 
+		ref="sqlSessionFactory" /> </bean> -->
 
 </beans>
