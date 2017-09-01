@@ -43,12 +43,10 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 	</bean>
 
 	<!--创建数据映射器，数据映射器必须为接口 -->
-	<!-- 
 	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="mapperInterface" value="springmvc.dao.mapper.UserMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
-	 -->
 
 	<bean id="userService" class="springmvc.service.ServiceUserMap"></bean>
 
