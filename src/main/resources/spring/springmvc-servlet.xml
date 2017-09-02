@@ -14,8 +14,6 @@
 	<!-- 扫描指定包带@Controller注解的类 -->
 	<context:component-scan base-package="springmvc.controller"></context:component-scan>
 
-	<context:annotation-config />
-
 	<!--视图解析器 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

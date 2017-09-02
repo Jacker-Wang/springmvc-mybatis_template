@@ -10,6 +10,7 @@
 
 	<properties>
 		<spring.version>4.1.4.RELEASE</spring.version>
+		<mybatis.version>3.4.0</mybatis.version>
 	</properties>
 
 	<dependencies>
@@ -114,7 +115,7 @@
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
-			<version>3.4.0</version>
+			<version>${mybatis.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mybatis</groupId>
