@@ -41,7 +41,7 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 	<!-- 配置aop -->
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice"
-			pointcut="execution(* com.wxisme.ssm.service.impl.*.*(..))" />
+			pointcut="execution(* springmvc.service.*.*(..))" />
 	</aop:config>
 
 </beans>
