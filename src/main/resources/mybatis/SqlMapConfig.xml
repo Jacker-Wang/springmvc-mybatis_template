@@ -14,7 +14,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<!--  
 		<package name="springmvc.dao.po" />
 		-->
-		<typeAlias alias="user" type="springmvc.dao.po.User" />
+		<typeAlias alias="user" type="springmvc.model.User" />
 	</typeAliases>
 
 	<!-- 数据库连接用数据库连接池 -->

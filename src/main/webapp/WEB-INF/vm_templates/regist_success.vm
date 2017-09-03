@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>注册成功</title>
+</head>
+<body>
+    <div>
+    恭喜注册成功
+        id:$user.user_id
+        username:$user.user_username
+        password:$user.user_password
+    </div>
+</body>
+</html>

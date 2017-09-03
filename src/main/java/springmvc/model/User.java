@@ -1,14 +1,14 @@
-package springmvc.dao.po;
+package springmvc.model;
 
 import org.springframework.stereotype.Repository;
 
 /**
  * @author gacl
- * user表所对应的实体类
+ * user锟斤拷锟斤拷锟斤拷应锟斤拷实锟斤拷锟斤拷
  */
 public class User {
 
-    //实体类的属性和表的字段名称一一对应
+    //实锟斤拷锟斤拷锟斤拷锟斤拷院捅锟斤拷锟街讹拷锟斤拷锟斤拷一一锟斤拷应
     private int user_id;
     private String user_name;
     private String user_password;

@@ -17,6 +17,6 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
 <!-- 定义service -->
-<bean id="userService" class="springmvc.service.ServiceUserMap"></bean>
+<bean id="userService" class="springmvc.service.UserService"></bean>
 
 </beans>
