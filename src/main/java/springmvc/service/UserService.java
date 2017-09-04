@@ -16,6 +16,7 @@ public class UserService {
 	}
 
 	public User getUserByUsernameAndPass(String user_name,String pass_word){
+		System.out.println("user_name="+user_name+"----user_password="+pass_word);
 		 User user=userMapper.getUserByUsernameAndPass(user_name, pass_word);
 		 System.out.println(user);
 		 return user;

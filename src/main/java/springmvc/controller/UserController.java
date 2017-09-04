@@ -35,7 +35,7 @@ public class UserController {
     }
     
     @RequestMapping("/regist")
-    public ModelAndView login(User user){
+    public ModelAndView regist(User user){
     	System.out.println("===========regist");
     	Boolean isRegist=userService.insertUser(user);
     	ModelAndView modelAndView=new ModelAndView();

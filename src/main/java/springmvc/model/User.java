@@ -4,11 +4,10 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @author gacl
- * user������Ӧ��ʵ����
+ * 
  */
 public class User {
 
-    //ʵ��������Ժͱ���ֶ�����һһ��Ӧ
     private int user_id;
     private String user_name;
     private String user_password;
