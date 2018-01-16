@@ -7,10 +7,6 @@
 	<name>springMVC Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
-	<!--github测试
-	123456
-         -->	
-
 	<properties>
 		<spring.version>4.1.4.RELEASE</spring.version>
 		<mybatis.version>3.4.0</mybatis.version>
