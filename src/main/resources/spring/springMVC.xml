@@ -52,11 +52,11 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/test" />
-			<bean class="springmvc.HandlerInterceptor1" />
+			<bean class="com.ssm.HandlerInterceptor1" />
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/test" />
-			<bean class="springmvc.HandlerInterceptor2" />
+			<bean class="com.ssm.HandlerInterceptor2" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 

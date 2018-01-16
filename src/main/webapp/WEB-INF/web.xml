@@ -6,6 +6,20 @@
 http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
 	<display-name></display-name>
+	
+	<!-- shiroFilter -->
+    <filter>
+        <filter-name>shiroFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <init-param>
+            <param-name>targetFilterLifecycle</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>shiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
 	<welcome-file-list>
 		<welcome-file>welcome.jsp</welcome-file>
@@ -25,7 +39,7 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	<!-- 加载spring容器 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>WEB-INF/classes/spring/applicationContext-*.xml</param-value>
+		<param-value>classpath:spring/applicationContext-*.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -39,7 +53,7 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 		<init-param>
 			<!-- ContextconfigLocation配置springmvc加载的配置文件 适配器、处理映射器等 -->
 			<param-name>contextConfigLocation</param-name>
-			<param-value>WEB-INF/classes/spring/springmvc-servlet.xml</param-value>
+			<param-value>classpath*:spring/springMVC.xml</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
